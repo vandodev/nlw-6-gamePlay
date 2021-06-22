@@ -1,13 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { Text, View, Image, StatusBar } from 'react-native';
 import {styles} from './styles';
+import IllustrationImg from '../../assets/illustration.png';
+import { ButtonIcon } from '../../components/ButtonIcon';
 
 export  function SignIn() {
   return (
     <View style={styles.container} >
-      <Text>Componente</Text>
-      <TextInput style={styles.input}/>
+      <StatusBar
+       barStyle="light-content"
+       backgroundColor="transparent"
+       translucent
+      />
+      <Image
+        source={IllustrationImg}
+        style={styles.image} 
+        resizeMode="stretch"
+       />
+
+       <View style={styles.content} >
+
+          <Text style={styles.title} >
+            Organize {'\n'}
+             suas jogatinas{'\n'}
+              facilmente
+          </Text>
+
+           <Text style={styles.subtitle} >
+            Crie grupos para jogar seus games {'\n'}
+            favoritos com seus amigo
+           </Text>
+           <ButtonIcon />
+
+       </View>
+      
     </View>
   );
 }
