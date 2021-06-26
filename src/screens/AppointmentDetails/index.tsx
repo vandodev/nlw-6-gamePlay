@@ -1,11 +1,12 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text, ImageBackground } from "react-native";
 import { Background } from "../../components/Background";
 import { Fontisto } from "@expo/vector-icons";
 import { BorderlessButton } from "react-native-gesture-handler";
 import { Header } from "../../components/Header";
 import { styles } from "./styles";
 import { theme } from "../../global/styles/theme";
+import BannerImg from "../../assets/banner.png";
 
 export function AppointmentDetails() {
   return (
@@ -18,6 +19,16 @@ export function AppointmentDetails() {
           </BorderlessButton>
         }
       />
+
+      <ImageBackground source={BannerImg} style={styles.banner}>
+        <View style={styles.bannerContent}>
+          <Text style={styles.title}>Lendários</Text>
+
+          <Text style={styles.subtitle}>
+            É hoje que vamos chegar ao challenger sem perder uma partida
+          </Text>
+        </View>
+      </ImageBackground>
     </Background>
   );
 }
