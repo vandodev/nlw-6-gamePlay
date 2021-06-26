@@ -7,6 +7,7 @@ import { Header } from "../../components/Header";
 import { styles } from "./styles";
 import { theme } from "../../global/styles/theme";
 import BannerImg from "../../assets/banner.png";
+import { ListHeader } from "../../components/ListHeader";
 
 export function AppointmentDetails() {
   return (
@@ -29,6 +30,8 @@ export function AppointmentDetails() {
           </Text>
         </View>
       </ImageBackground>
+
+      <ListHeader title="Jogadores" subtitle={`Total 3`} />
     </Background>
   );
 }
