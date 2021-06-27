@@ -1,15 +1,17 @@
 import React from "react";
 import { View, Text, ImageBackground, FlatList } from "react-native";
-import { Background } from "../../components/Background";
-import { Fontisto } from "@expo/vector-icons";
-import { BorderlessButton } from "react-native-gesture-handler";
-import { Header } from "../../components/Header";
 import { styles } from "./styles";
 import { theme } from "../../global/styles/theme";
+import { Fontisto } from "@expo/vector-icons";
+
+import { Background } from "../../components/Background";
+import { BorderlessButton } from "react-native-gesture-handler";
+import { Header } from "../../components/Header";
 import BannerImg from "../../assets/banner.png";
 import { ListHeader } from "../../components/ListHeader";
 import { Member } from "../../components/Member";
 import { ListDivider } from "../../components/ListDivider";
+import { ButtonIcon } from "../../components/ButtonIcon";
 
 export function AppointmentDetails() {
   const members = [
@@ -57,6 +59,10 @@ export function AppointmentDetails() {
         ItemSeparatorComponent={() => <ListDivider isCentered />}
         style={styles.members}
       />
+
+      <View style={styles.footer}>
+        <ButtonIcon title="Entar na partida" />
+      </View>
     </Background>
   );
 }
