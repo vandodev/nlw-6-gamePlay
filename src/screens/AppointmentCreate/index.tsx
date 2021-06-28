@@ -8,6 +8,7 @@ import { theme } from "../../global/styles/theme";
 import { CategorySelect } from "../../components/CategorySelect";
 import { GuildIcon } from "../../components/GuildIcon";
 import { SmallInput } from "../../components/SmallInput";
+import { TextArea } from "../../components/TextArea";
 
 import { Background } from "../../components/Background";
 import { Header } from "../../components/Header";
@@ -74,6 +75,19 @@ export function AppointmentCreate() {
             </View>
           </View>
         </View>
+
+        <View style={[styles.field, { marginBottom: 12 }]}>
+          <Text style={styles.label}>Descrição</Text>
+
+          <Text style={styles.caracteresLimit}>Max 100 caracteres</Text>
+        </View>
+
+        <TextArea
+          multiline
+          maxLength={100}
+          numberOfLines={5}
+          autoCorrect={false}
+        />
       </View>
     </Background>
   );

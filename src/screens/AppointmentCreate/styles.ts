@@ -54,4 +54,9 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.text500,
     color: theme.colors.highlight,
   },
+  caracteresLimit: {
+    fontFamily: theme.fonts.text400,
+    fontSize: 13,
+    color: theme.colors.highlight,
+  },
 });
