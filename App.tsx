@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar } from "react-native";
-import { AuthContext } from "./src/context/auth";
+import { AuthProvider } from "./src/hooks/auth";
 import { useFonts } from "expo-font";
 import { Inter_400Regular, Inter_500Medium } from "@expo-google-fonts/inter";
 import {
@@ -30,15 +30,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <AuthContext.Provider
-        value={{
-          name: "Evandro",
-          email: "vandoaparecido@hotmail.com",
-          avatar: "evandro.png",
-        }}
-      >
+      <AuthProvider>
         <Routes />
-      </AuthContext.Provider>
+      </AuthProvider>
     </Background>
   );
 }
