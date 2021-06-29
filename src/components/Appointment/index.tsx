@@ -10,6 +10,7 @@ import CalendarSvg from "../../assets/calendar.svg";
 
 import { GuildIcon } from "../GuildIcon";
 import { categories } from "../../utils/categories";
+import { GuildProps } from "../Guild";
 
 export type AppointmentProps = {
   id: string;
