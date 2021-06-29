@@ -11,13 +11,6 @@ import CalendarSvg from "../../assets/calendar.svg";
 import { GuildIcon } from "../GuildIcon";
 import { categories } from "../../utils/categories";
 
-export type Guildprops = {
-  id: string;
-  name: string;
-  icon: null;
-  owner: boolean;
-};
-
 export type AppointmentProps = {
   id: string;
   guild: GuildProps;
