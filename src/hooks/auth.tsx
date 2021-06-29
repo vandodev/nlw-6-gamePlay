@@ -23,7 +23,15 @@ type AuthProviderProps = {
 export const AuthContext = createContext({} as AuthContextData);
 
 function AuthProvider({ children }: AuthProviderProps) {
-  const [user, setUser] = useState<User>({} as User);
+  //   const [user, setUser] = useState<User>({} as User);
+  const [user, setUser] = useState<User>({
+    id: "1",
+    username: "Evandro",
+    firstName: "Evandro",
+    avatar: "evandro",
+    email: "vandoaparecido@hotmail.com",
+    token: "dgfhgjtyfhrufjfgo",
+  });
   return (
     <AuthContext.Provider
       value={{
